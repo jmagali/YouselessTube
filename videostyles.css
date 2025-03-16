@@ -101,10 +101,10 @@ html{
 
 .channel-icon{
     position: absolute;
-    top:29%;
+    top:25%;
     left:87%;
-    width: 2.5%;
-    height: 5%;
+    width: 2%;
+    height: 4%;
 }
 
 .video-title{
@@ -118,8 +118,110 @@ html{
 }
 .video-channel-name{
     position:absolute;
-    top:18%;
+    top:26%;
+    left:90%;
+    text-decoration: none;
+    color:grey;
+    font-size:13px;
+}
+.video-metadata{
+    position:absolute;
+    top:30.5%;
+    left:88%;
+    color:grey;
+    font-size:14px;
+}
+
+/*BULL SHIT ABT TO OCCUR*/
+.thumbnail2{
+    position:absolute;
+    top:45%;
+    left:73%;
+}
+.thumbnail2 img{
+    width: 50%;
+    height: 50%;
+}
+
+.channel-icon2{
+    position: absolute;
+    top:52%;
     left:87%;
+    width: 2%;
+    height: 4%;
+}
+
+.video-title2{
+    position:absolute;
+    top:45%;
+    left: 87%;
     text-decoration: none;
     color:black;
+    font-weight: 900;
+    font-size: 17px;
+}
+.video-channel-name2{
+    position:absolute;
+    top:53%;
+    left:90%;
+    text-decoration: none;
+    color:grey;
+    font-size:13px;
+}
+.video-metadata2{
+    position:absolute;
+    top:57.5%;
+    left:88%;
+    color:grey;
+    font-size:14px;
+}
+/*BULL SHIT ABT TO OCCUR AGAIN*/
+.thumbnail3{
+    position:absolute;
+    top:72%;
+    left:73%;
+}
+.thumbnail3 img{
+    width: 50%;
+    height: 50%;
+}
+
+.channel-icon3{
+    position: absolute;
+    top:79%;
+    left:87%;
+    width: 2%;
+    height: 4%;
+}
+
+.video-title3{
+    position:absolute;
+    top:72%;
+    left: 87%;
+    text-decoration: none;
+    color:black;
+    font-weight: 900;
+    font-size: 17px;
+}
+.video-channel-name3{
+    position:absolute;
+    top:80%;
+    left:90%;
+    text-decoration: none;
+    color:grey;
+    font-size:13px;
+}
+.video-metadata3{
+    position:absolute;
+    top:84.5%;
+    left:88%;
+    color:grey;
+    font-size:14px;
+}
+#serch-input{
+    position:absolute;
+    top:5%;
+    left:30%;
+    width: 40%;
+    height: 30px;
 }
