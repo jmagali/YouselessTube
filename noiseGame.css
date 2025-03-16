@@ -1,0 +1,64 @@
+:root {
+    --xPositionOne: 0vh; /* Ensure units are included here */
+    --xPositionTwo: 0vh; 
+    --xPositionThree: 0vh; 
+    --xPositionFour: 0vh; 
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://img.freepik.com/free-vector/vector-black-minimal-aesthetic-grid-pattern-background_53876-117155.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#volumeBar {
+    margin-top: 5%;
+    width: 60%;
+    height: 1vh;
+    background-color: white;
+    border-radius: 25%;
+}
+
+#volume {
+    width: 30vh;
+    height: 30vh;
+    display: flex;
+    transform: rotate(135deg);
+    position: absolute;
+    right: 165vh;
+    bottom: 30vh;
+}
+
+#ball {
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    width: 3vh;
+    height: 3vh;
+    right: 175vh;
+    bottom: 50vh;
+    animation: none; /* Initially no animation */
+}
+
+@keyframes projectile-motion {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(var(--xPositionOne), -20vh);
+    }
+    60% {
+        transform: translate(var(--xPositionTwo), -40vh);
+    }
+    70% {
+        transform: translate(var(--xPositionThree), -20vh);
+    }
+    100% {
+        transform: translate(var(--xPositionFour), 7vh);
+    }
+}
