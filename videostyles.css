@@ -227,3 +227,31 @@ html{
     border-radius: 40px;
     padding-left: 10px;
 }
+#p1{
+    position: absolute;
+    font-size:50px;
+    font-weight: bolder;
+    top: 76%;
+    left: 12%;
+}
+.channel-icon4{
+    position:absolute;
+    top:92%;
+    left:14%;
+    width: 2.5%;
+    height: 5%;
+}
+#p2{
+    position: absolute;
+    font-size:20px;
+    top: 88%;
+    left: 18%;
+    color:gray;
+}
+#p3{
+    position: absolute;
+    font-size:15px;
+    top: 92%;
+    left: 18%;
+    color:gray;
+}
