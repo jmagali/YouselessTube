@@ -62,6 +62,10 @@ function getSignupFormErrors(firstname, lastname, username, password, repeatPass
         errors.push('Password must include a capital letter')
         password_input.parentElement.classList.add('incorrect')
     }
+    if (sumsToTwentyFour(password)) {
+        errors.push('The digits must sum to 24')
+        password_input.parentElement.classList.add('incorrect')
+    }
 
 
     return errors;
@@ -77,6 +81,23 @@ function includesNumber(password) {
 
         return false;
     }
+}
+
+function sumsToTwentyFour(password) {
+    let sum = 0;
+
+    for (let i = 0; i < password.length; i++) {
+
+        if (isNaN(password[i])) {
+            sum += password[i];
+        }
+    }
+
+    if (sum == 24) {
+        return true;
+    }
+
+    return false;
 }
 
 function includesUpperCase(password) {
