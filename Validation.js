@@ -54,6 +54,23 @@ function getSignupFormErrors (firstname, lastname, username, password, repeatPas
         password_input.parentElement.classList.add('incorrect')
         repeat_password_input_two.parentElement.classList.add('incorrect')
     }
+    if (includesNumber (password)) {
+        errors.push('Password must include a number')
+        password_input.parentElement.classList.add('incorrect')
+    }
+
 
     return errors;
+}
+
+function includesNumber (password) {
+    
+    for (let i = 0; i < password.length; i++) {
+       
+        if (isNaN(password[i])) {
+            return true;
+        }
+        
+        return false;
+    }
 }
