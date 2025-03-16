@@ -1,7 +1,7 @@
 const audio = document.querySelector("#mute-icon");
-var playNoiseYet = localStorage.getItem('playNoiseYet');
+var playNoiseYet = JSON.parse(localStorage.getItem('playNoiseYet'));
 
-if (playNoiseYet == null) {
+if (!playNoiseYet) {
     setTimeout(() => {
         alert("Oh no! It seems like the video has no audio! Please press the volume button to turn it on!");
     }, 1000);
@@ -10,9 +10,9 @@ if (playNoiseYet == null) {
 
     function goToNoiseGame() {
         window.location.href = 'noiseGame.html';
-        playNoiseYet = true;
-        localStorage.setItem('playNoiseYet', playNoiseYet);
-        audio.removeEventListener("click", goToNoiseGame)
+        localStorage.setItem('playNoiseYet', JSON.stringify(true)); 
+        audio.removeEventListener("click", goToNoiseGame);
     }
-
 }
+
+localStorage.removeItem('playNoiseYet');
