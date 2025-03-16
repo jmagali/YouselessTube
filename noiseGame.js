@@ -21,6 +21,7 @@ volume.addEventListener("click", () => {
 
     if (random === 136) {
         setTimeout(() => {
+            ignore = true;
             window.location.href = 'videopage.html';
         }, 1000); 
     }
