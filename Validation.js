@@ -24,7 +24,9 @@ form.addEventListener('submit', (e) => {
         error_message.innerHTML = errors.map(error => `<p>${error}</p>`).join('');
     }
     else {
-        window.location.href = 'Homepage.html';
+        e.preventDefault();  // Prevent the form from actually submitting
+        // Redirect to a new page
+        window.location.href = 'Homepage.html';  // Change 'newpage.html' to the target page
     }
 
 
@@ -172,9 +174,3 @@ allInputs.forEach(input => {
     });
 });
 
-form.addEventListener('submit', function (event) {
-    event.preventDefault();  // Prevent the form from actually submitting
-
-    // Redirect to a new page
-    window.location.href = 'Homepage.html';  // Change 'newpage.html' to the target page
-})
