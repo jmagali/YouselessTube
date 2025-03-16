@@ -5,9 +5,6 @@ volume.addEventListener("click", () => {
 
     let random = Math.random() * ((76) + 60);
 
-    if (random > 100)
-        random = 136;
-
     document.documentElement.style.setProperty("--xPositionFour", `${random}vh`);
     document.documentElement.style.setProperty("--xPositionThree", `${random / 4 * 3}vh`);
     document.documentElement.style.setProperty("--xPositionTwo", `${random / 2}vh`);
