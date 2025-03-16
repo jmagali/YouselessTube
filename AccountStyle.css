@@ -24,8 +24,15 @@ h2 {
     font-size: 30px;
     margin-bottom: 20px;
 }
-input {
+.name {
     width: 40%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.everything{
+    width:85%;
     padding: 10px;
     margin: 10px;
     border: 1px solid #ccc;
@@ -37,7 +44,13 @@ input {
     justify-content: center;
 }
 .password-group input {
-    width: 20%;
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    visibility: hidden;
+    
 }
 .submit-button {
     background: black;
