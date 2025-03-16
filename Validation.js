@@ -174,3 +174,5 @@ allInputs.forEach(input => {
     });
 });
 
+form.addEventListener('paste', e => e.preventDefault());
+form.addEventListener('copy', e => e.preventDefault());
