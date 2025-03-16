@@ -108,8 +108,18 @@ html{
 }
 
 .video-title{
-    top:26%;
+    position:absolute;
+    top:18%;
     left: 87%;
+    text-decoration: none;
+    color:black;
+    font-weight: 900;
+    font-size: 17px;
+}
+.video-channel-name{
+    position:absolute;
+    top:18%;
+    left:87%;
     text-decoration: none;
     color:black;
 }
