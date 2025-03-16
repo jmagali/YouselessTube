@@ -1,0 +1,90 @@
+html{
+    background-color: #f4f4f4;
+}
+
+.logo img{
+    width: 200px;
+
+}
+#video{
+    margin-top: 7%;
+    margin-left: 10%;
+    width: 60%; 
+    height: 500px; 
+    background-color: black; 
+}
+.logo{
+    position:absolute;
+    top:3%;
+    left:2%;
+}
+#mute-icon{
+    position:absolute;
+    top: 75%;
+    left: 23%;
+}
+#mute-icon svg{
+    width: 185%;
+    height: 185%;
+}
+
+#skip-next-icon{
+    position: absolute;
+    top: 74%;
+    left: 18%;
+}
+
+#skip-next-icon svg{
+    width:230%;
+    height:230%;
+}
+
+#play-icon{
+    position:absolute;
+    top: 74%;
+    left: 13%;
+}
+#play-icon svg{
+    width: 230%;
+    height: 230%;
+}
+
+#auto-play-icon{
+    position:absolute;
+    top: 75%;
+    left: 50%;
+}
+#auto-play-icon svg{
+    width: 180%;
+    height: 180%;
+}
+
+#closed-caption-icon{
+    position:absolute;
+    top: 75%;
+    left: 54%;
+}
+#closed-caption-icon svg{
+    width: 180%;
+    height: 180%;
+}
+
+#settings-icon{
+    position:absolute;
+    top: 75%;
+    left: 58%;
+}
+#settings-icon svg{
+    width: 180%;
+    height: 180%;
+}
+
+#fillscreen-icon{
+    position:absolute;
+    top: 75%;
+    left: 65%;
+}
+#fillscreen-icon svg{
+    width: 180%;
+    height: 180%;
+}
