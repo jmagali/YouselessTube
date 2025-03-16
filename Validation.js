@@ -63,10 +63,13 @@ function getSignupFormErrors(firstname, lastname, username, password, repeatPass
         password_input.parentElement.classList.add('incorrect')
     }
     if (sumsToTwentyFour(password)) {
-        errors.push('The digits must sum to 24')
+        errors.push('Digits must sum to 24')
         password_input.parentElement.classList.add('incorrect')
     }
-
+    if (includesJadon(password)) {
+        errors.push('TPassword must include "Jadon"')
+        password_input.parentElement.classList.add('incorrect') 
+    }
 
     return errors;
 }
@@ -110,4 +113,12 @@ function includesUpperCase(password) {
 
         return false;
     }
+}
+
+function includesJadon (password) {
+    if (password.includes("Jadon")) {
+        return true;
+    }
+
+    return false;
 }
