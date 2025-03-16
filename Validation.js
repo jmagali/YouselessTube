@@ -12,7 +12,7 @@ form.addEventListener('submit', (e) => {
     let errors = []
 
     errors = getSignupFormErrors(
-        firstName_input.value, 
+        firstName_input.value,
         lastName_input.value,
         username.value, password_input.value,
         repeat_password_input_one.value,
@@ -26,7 +26,7 @@ form.addEventListener('submit', (e) => {
     }
 })
 
-function getSignupFormErrors (firstname, lastname, username, password, repeatPasswordOne, repeatPassWordTwo) {
+function getSignupFormErrors(firstname, lastname, username, password, repeatPasswordOne, repeatPassWordTwo) {
     let errors = [];
 
     if (firstname === '' || firstname == null) {
@@ -54,8 +54,12 @@ function getSignupFormErrors (firstname, lastname, username, password, repeatPas
         password_input.parentElement.classList.add('incorrect')
         repeat_password_input_two.parentElement.classList.add('incorrect')
     }
-    if (includesNumber (password)) {
+    if (includesNumber(password)) {
         errors.push('Password must include a number')
+        password_input.parentElement.classList.add('incorrect')
+    }
+    if (includesUpperCase(password)) {
+        errors.push('Password must include a capital letter')
         password_input.parentElement.classList.add('incorrect')
     }
 
@@ -63,14 +67,26 @@ function getSignupFormErrors (firstname, lastname, username, password, repeatPas
     return errors;
 }
 
-function includesNumber (password) {
-    
+function includesNumber(password) {
+
     for (let i = 0; i < password.length; i++) {
-       
+
         if (isNaN(password[i])) {
             return true;
         }
-        
+
+        return false;
+    }
+}
+
+function includesUpperCase(password) {
+
+    for (let i = 0; i < password.length; i++) {
+
+        if (password[i] === password[i].toUpperCase()) {
+            return true;
+        }
+
         return false;
     }
 }
