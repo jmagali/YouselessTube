@@ -88,3 +88,28 @@ html{
     width: 180%;
     height: 180%;
 }
+
+.thumbnail{
+    position:absolute;
+    top:18%;
+    left:73%;
+}
+.thumbnail img{
+    width: 50%;
+    height: 50%;
+}
+
+.channel-icon{
+    position: absolute;
+    top:29%;
+    left:87%;
+    width: 2.5%;
+    height: 5%;
+}
+
+.video-title{
+    top:26%;
+    left: 87%;
+    text-decoration: none;
+    color:black;
+}
