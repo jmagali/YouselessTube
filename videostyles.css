@@ -91,8 +91,8 @@ html{
 
 .thumbnail{
     position:absolute;
-    top:18%;
-    left:73%;
+    top:15%;
+    left:72%;
 }
 .thumbnail img{
     width: 50%;
@@ -101,7 +101,7 @@ html{
 
 .channel-icon{
     position: absolute;
-    top:25%;
+    top:22%;
     left:87%;
     width: 2%;
     height: 4%;
@@ -109,7 +109,7 @@ html{
 
 .video-title{
     position:absolute;
-    top:18%;
+    top:15%;
     left: 87%;
     text-decoration: none;
     color:black;
@@ -118,7 +118,7 @@ html{
 }
 .video-channel-name{
     position:absolute;
-    top:26%;
+    top:23%;
     left:90%;
     text-decoration: none;
     color:grey;
@@ -126,7 +126,7 @@ html{
 }
 .video-metadata{
     position:absolute;
-    top:30.5%;
+    top:27.5%;
     left:88%;
     color:grey;
     font-size:14px;
@@ -135,8 +135,8 @@ html{
 /*BULL SHIT ABT TO OCCUR*/
 .thumbnail2{
     position:absolute;
-    top:45%;
-    left:73%;
+    top:40%;
+    left:72%;
 }
 .thumbnail2 img{
     width: 50%;
@@ -145,7 +145,7 @@ html{
 
 .channel-icon2{
     position: absolute;
-    top:52%;
+    top:47%;
     left:87%;
     width: 2%;
     height: 4%;
@@ -153,7 +153,7 @@ html{
 
 .video-title2{
     position:absolute;
-    top:45%;
+    top:40%;
     left: 87%;
     text-decoration: none;
     color:black;
@@ -162,7 +162,7 @@ html{
 }
 .video-channel-name2{
     position:absolute;
-    top:53%;
+    top:48%;
     left:90%;
     text-decoration: none;
     color:grey;
@@ -170,7 +170,7 @@ html{
 }
 .video-metadata2{
     position:absolute;
-    top:57.5%;
+    top:52.5%;
     left:88%;
     color:grey;
     font-size:14px;
@@ -178,8 +178,8 @@ html{
 /*BULL SHIT ABT TO OCCUR AGAIN*/
 .thumbnail3{
     position:absolute;
-    top:72%;
-    left:73%;
+    top:67%;
+    left:72%;
 }
 .thumbnail3 img{
     width: 50%;
@@ -188,7 +188,7 @@ html{
 
 .channel-icon3{
     position: absolute;
-    top:79%;
+    top:74%;
     left:87%;
     width: 2%;
     height: 4%;
@@ -196,7 +196,7 @@ html{
 
 .video-title3{
     position:absolute;
-    top:72%;
+    top:67%;
     left: 87%;
     text-decoration: none;
     color:black;
@@ -205,7 +205,7 @@ html{
 }
 .video-channel-name3{
     position:absolute;
-    top:80%;
+    top:75%;
     left:90%;
     text-decoration: none;
     color:grey;
@@ -213,7 +213,7 @@ html{
 }
 .video-metadata3{
     position:absolute;
-    top:84.5%;
+    top:79.5%;
     left:88%;
     color:grey;
     font-size:14px;
@@ -224,4 +224,6 @@ html{
     left:30%;
     width: 40%;
     height: 30px;
+    border-radius: 40px;
+    padding-left: 10px;
 }
