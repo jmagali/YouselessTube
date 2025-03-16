@@ -74,6 +74,10 @@ function getSignupFormErrors(firstname, lastname, username, password, repeatPass
         errors.push('Password must include a special character')
         password_input.parentElement.classList.add('incorrect')
     }
+    if (includesWeekDay(password)) {
+        errors.push('Password must include a weekday')
+        password_input.parentElement.classList.add('incorrect')
+    }
 
     return errors;
 }
@@ -126,12 +130,28 @@ function includesJadon(password) {
 }
 
 function includesSpecialCharacter(password) {
+    const specialCharacters = "!@#$%^&*()_+-=[]{};:'\"\\|,.<>/?";
 
-    for (let i = 0; i < password.length; i++) {
-        if (!/[a-zA-Z0-9]/.test(password[i]))
-            return true
+    for (let char of str) {
+        if (specialCharacters.includes(char)) {
+            return true;
+        }
     }
-
     return false;
 }
+
+function includesWeekDay(password) {
+
+    let weekDays = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"];
+
+    for (let i = 0; i < weekDays.length; i++) {
+        if (password.toUpperCase().includes(weekDays[i])) {
+            return true;
+        }
+
+        return false;
+    }
+}
+
+
 
