@@ -25,6 +25,8 @@ form.addEventListener('submit', (e) => {
         e.preventDefault()
         error_message.innerText = errors.join(". ")
     }
+
+    console.log(errors);
 })
 
 function getSignupFormErrors(firstname, lastname, username, password, repeatPasswordOne, repeatPassWordTwo) {
