@@ -1,5 +1,6 @@
 const form = document.getElementById('form')
-const fullName_input = document.getElementById('fullName-input')
+const firstName_input = document.getElementById('firstName-input')
+const lastName_input = document.getElementById('lastName-input')
 const username_input = document.getElementById('username-input')
 const password_input = document.getElementById('password-input')
 const repeat_password_input_one = document.getElementById('repeat-password-input-one')
@@ -11,7 +12,8 @@ form.addEventListener('submit', (e) => {
     let errors = []
 
     errors = getSignupFormErrors(
-        firstname_input.value,
+        firstName_input.value, 
+        lastName_input.value,
         username.value, password_input.value,
         repeat_password_input_one.value,
         repeat_password_input_two
@@ -24,12 +26,16 @@ form.addEventListener('submit', (e) => {
     }
 })
 
-function getSignupFormErrors (fullName, username, password, repeatPasswordOne, repeatPassWordTwo) {
+function getSignupFormErrors (firstname, lastname, username, password, repeatPasswordOne, repeatPassWordTwo) {
     let errors = [];
 
-    if (fullName === '' || fullName == null) {
-        errors.push('Full name is required')
-        fullName_input.parentElement.classList.add('incorrect')
+    if (firstname === '' || firstname == null) {
+        errors.push('First name is required')
+        firstName_input.parentElement.classList.add('incorrect')
+    }
+    if (lastname === '' || lastname == null) {
+        errors.push('Last name is required')
+        lastName_input.parentElement.classList.add('incorrect')
     }
     if (username === '' || username == null) {
         errors.push('Username is required')
