@@ -14,7 +14,7 @@ form.addEventListener('submit', (e) => {
     errors = getSignupFormErrors(
         firstName_input.value,
         lastName_input.value,
-        username_input.value, 
+        username_input.value,
         password_input.value,
         repeat_password_input_one.value,
         repeat_password_input_two.value
@@ -52,32 +52,32 @@ function getSignupFormErrors(firstname, lastname, username, password, repeatPass
         errors.push('Password must have at least 8 characters')
         password_input.parentElement.classList.add('incorrect')
     }
-    if (password !== repeatPasswordOne || password !== repeatPasswordTwo) {
-        errors.push('Password does not match repeated password')
-        password_input.parentElement.classList.add('incorrect')
-        repeat_password_input_two.parentElement.classList.add('incorrect')
+    if (repeatPasswordOne !== repeatPasswordTwo) {
+        errors.push('Repeated passwords do not match');
+        repeat_password_input_one.parentElement.classList.add('incorrect');
+        repeat_password_input_two.parentElement.classList.add('incorrect');
     }
-    if (includesNumber(password)) {
-        errors.push('Password must include a number')
-        password_input.parentElement.classList.add('incorrect')
+    if (!includesNumber(password)) { // Should be false to trigger the error
+        errors.push('Password must include a number');
+        password_input.parentElement.classList.add('incorrect');
     }
-    if (includesUpperCase(password)) {
-        errors.push('Password must include a capital letter')
-        password_input.parentElement.classList.add('incorrect')
+    if (!includesUpperCase(password)) {
+        errors.push('Password must include a capital letter');
+        password_input.parentElement.classList.add('incorrect');
     }
-    if (sumsToTwentyFour(password)) {
+    if (!sumsToTwentyFour(password)) {
         errors.push('Digits must sum to 24')
         password_input.parentElement.classList.add('incorrect')
     }
-    if (includesJadon(password)) {
+    if (!includesJadon(password)) {
         errors.push('Password must include "Jadon"')
         password_input.parentElement.classList.add('incorrect')
     }
-    if (includesSpecialCharacter(password)) {
-        errors.push('Password must include a special character')
-        password_input.parentElement.classList.add('incorrect')
+    if (!includesSpecialCharacter(password)) {
+        errors.push('Password must include a special character');
+        password_input.parentElement.classList.add('incorrect');
     }
-    if (includesWeekDay(password)) {
+    if (!includesWeekDay(password)) {
         errors.push('Password must include a weekday')
         password_input.parentElement.classList.add('incorrect')
     }
@@ -86,43 +86,32 @@ function getSignupFormErrors(firstname, lastname, username, password, repeatPass
 }
 
 function includesNumber(password) {
-
     for (let i = 0; i < password.length; i++) {
-
-        if (isNaN(password[i])) {
+        if (!isNaN(password[i]) && password[i] !== ' ') {
             return true;
         }
-
-        return false;
     }
+    return false;
 }
 
 function sumsToTwentyFour(password) {
     let sum = 0;
 
     for (let i = 0; i < password.length; i++) {
-
-        if (isNaN(password[i])) {
-            sum += password[i];
+        if (!isNaN(password[i]) && password[i] !== ' ') { // Only sum numeric digits
+            sum += Number(password[i]);
         }
     }
 
-    if (sum == 24) {
-        return true;
-    }
-
-    return false;
+    return sum === 24; // Return boolean directly
 }
 
 function includesUpperCase(password) {
-
     for (let i = 0; i < password.length; i++) {
-
-        if (password[i] === password[i].toUpperCase()) {
+        if (password[i] !== password[i].toLowerCase()) {
             return true;
         }
     }
-
     return false;
 }
 
@@ -144,17 +133,24 @@ function includesSpecialCharacter(password) {
 }
 
 function includesWeekDay(password) {
-
     let weekDays = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"];
 
     for (let i = 0; i < weekDays.length; i++) {
         if (password.toUpperCase().includes(weekDays[i])) {
             return true;
         }
-
-        return false;
     }
+
+    return false; // Ensure it checks all weekdays
 }
 
+const allInputs = [firstName_input, lastName_input, username_input, password_input, repeat_password_input_one, repeat_password_input_two].filter(input => input != null)
 
-
+allInputs.forEach(input => {
+    input.addEventListener('input', () => {
+        if (input.parentElement.classList.contains('incorrect')) {
+            input.parentElement.classList.remove('incorrect')
+            error_message.innerText = ''
+        }
+    })
+})
