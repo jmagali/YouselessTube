@@ -15,25 +15,25 @@
     transform: translate(60px, -50px);
 }
 
+.not_working_vid_cards {
+    transform: translateY(-50px);
+    display: flex;
+    flex-direction: row; /* Ensures items are aligned horizontally */
+    justify-content: space-between; /* Ensures space between items */
+    margin: 5px;
+    padding: 20px;
+  }
+  
+  .not_working_vid_card {
+    width: 10050px;   /* Set width to 250px */
+    height: 150px;  /* Set height to 150px */
+    background-color: #ffffff;
+    margin: 0 30px;  /* Horizontal margin of 5px */
+    border-radius: 10px;
+  }
 
-.not_working_vid_card {
-    width: 250px;
-    height: 150px;
-    min-width: 250px;
-    min-height: 150px;
-    background-color: rgb(255, 0, 0);
-    border-radius: 5%;
-    margin: 10px;
-    transform: translate(20px, -50px);
-}
 
-#search_bar {
-    background-color: white;
-    width: 1000px;
-    height: 31px;
-    border: 2px solid #000000;
-    transform: translate(20%, -975%);
-}
+
 
 * {
     background-color: grey;
