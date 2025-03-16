@@ -4,6 +4,7 @@ body {
     text-align: center;
     padding: 50px;
 }
+
 .container {
     background: white;
     padding: 20px;
@@ -12,18 +13,22 @@ body {
     margin: auto;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 .logo {
     font-size: 28px;
     font-weight: bold;
 }
+
 .logo img {
     width: 200px;
     vertical-align: middle;
 }
+
 h2 {
     font-size: 30px;
     margin-bottom: 20px;
 }
+
 .name {
     width: 40%;
     padding: 10px;
@@ -31,18 +36,21 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-.everything{
-    width:85%;
+
+.everything {
+    width: 85%;
     padding: 10px;
     margin: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .password-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .password-group input {
     width: 40%;
     padding: 10px;
@@ -50,8 +58,9 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 5px;
     visibility: hidden;
-    
+
 }
+
 .submit-button {
     background: black;
     color: white;
@@ -61,6 +70,19 @@ h2 {
     cursor: pointer;
     margin-top: 20px;
 }
+
 .submit-button:hover {
     background: gray;
+}
+
+form div.incorrect label {
+    background-color: #f06272;
+}
+
+form div.incorrect input {
+    border-color: #f06272;
+}
+
+#error-message {
+    color: #f06272;
 }
