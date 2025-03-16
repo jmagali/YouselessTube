@@ -14,9 +14,10 @@ form.addEventListener('submit', (e) => {
     errors = getSignupFormErrors(
         firstName_input.value,
         lastName_input.value,
-        username.value, password_input.value,
+        username_input.value, 
+        password_input.value,
         repeat_password_input_one.value,
-        repeat_password_input_two
+        repeat_password_input_two.value
     )
 
     if (errors.length > 0) {
@@ -118,9 +119,9 @@ function includesUpperCase(password) {
         if (password[i] === password[i].toUpperCase()) {
             return true;
         }
-
-        return false;
     }
+
+    return false;
 }
 
 function includesJadon(password) {
@@ -132,7 +133,7 @@ function includesJadon(password) {
 function includesSpecialCharacter(password) {
     const specialCharacters = "!@#$%^&*()_+-=[]{};:'\"\\|,.<>/?";
 
-    for (let char of str) {
+    for (let char of password) {
         if (specialCharacters.includes(char)) {
             return true;
         }
