@@ -67,8 +67,12 @@ function getSignupFormErrors(firstname, lastname, username, password, repeatPass
         password_input.parentElement.classList.add('incorrect')
     }
     if (includesJadon(password)) {
-        errors.push('TPassword must include "Jadon"')
-        password_input.parentElement.classList.add('incorrect') 
+        errors.push('Password must include "Jadon"')
+        password_input.parentElement.classList.add('incorrect')
+    }
+    if (includesSpecialCharacter(password)) {
+        errors.push('Password must include a special character')
+        password_input.parentElement.classList.add('incorrect')
     }
 
     return errors;
@@ -115,10 +119,19 @@ function includesUpperCase(password) {
     }
 }
 
-function includesJadon (password) {
-    if (password.includes("Jadon")) {
-        return true;
+function includesJadon(password) {
+
+    return password.includes("Jadon")
+
+}
+
+function includesSpecialCharacter(password) {
+
+    for (let i = 0; i < password.length; i++) {
+        if (!/[a-zA-Z0-9]/.test(password[i]))
+            return true
     }
 
     return false;
 }
+
