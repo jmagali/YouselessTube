@@ -26,7 +26,7 @@ form.addEventListener('submit', (e) => {
     else {
         e.preventDefault();  // Prevent the form from actually submitting
         // Redirect to a new page
-        window.location.href = 'Homepage.html';  // Change 'newpage.html' to the target page
+        window.location.href = 'Homepage.html';
     }
 
 
